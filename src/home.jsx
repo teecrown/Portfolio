@@ -9,7 +9,7 @@ import { Phone } from 'lucide-react';
 // Data
 const projects = [
   {
-    title: "TransitLive",
+    title: "Fixit Naija",
     blurb: " innovative civic tech platform, where you can easily report and track public infrastructure problems in your community.Join us in making a difference by highlighting issues in your community.",
     image: Fixit,
     tech: [ "React", "TypeScript", "Tailwind", "PWA"],
@@ -64,7 +64,7 @@ export default function Portfolio() {
             <a href="#home" className="font-bold text-lg">
               TADE ABIOLA
             </a>
-            <nav className="hidden md:flex gap-6">
+            <nav className="hidden md:flex  gap-16">
               <a href="#projects" className="hover:underline">
                 Projects
               </a>
@@ -90,17 +90,17 @@ export default function Portfolio() {
         {/* Hero */}
         <section
           id="home"
-          className="container mx-auto px-4 py-16 flex flex-col md:flex-row gap-16 items-center"
+          className="container mx-auto px-16 py-16 flex flex-col md:flex-row md:justify-center gap-16 items-center"
         >
           <img
             src={pics}
             alt="Your portrait"
-            className="rounded-full w-40 h-40 sm:w-100 sm:h-100"
+            className="rounded-full w-40 h-40 sm:w-60 sm:h-60"
           />
           <div >
             
             <h1 className="text-4xl font-bold mb-4">Hi, I’m Abiola Tade 👋</h1>
-            <p className="mb-6 text-lg w-[400px]">
+            <p className="mb-6 text-md w-[300px] sm:w-[400px] px-[5px]">
               Front‑End Developer specialized in building fast, responsive, and
               accessible web apps with React, Next.js, TypeScript, and Tailwind
               CSS. I turn complex ideas into clean, user-friendly interfaces
@@ -125,9 +125,9 @@ export default function Portfolio() {
         </section>
 
         {/* Projects */}
-        <section id="projects" className="container mx-auto px-4 py-16">
+        <section id="projects" className="container mx-auto  px-4 py-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid justify-center md:grid-cols-3 gap-8">
             {projects.map((p) => (
               <div
                 key={p.title}
@@ -136,7 +136,7 @@ export default function Portfolio() {
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="w-full h-48 object-cover"
+                  className="-[10px] w-[full]  object-cover"
                 />
                 <div className="p-4">
                   <h3 className="font-bold text-xl mb-2">{p.title}</h3>
@@ -151,7 +151,7 @@ export default function Portfolio() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex justify-center gap-2">
                     <a
                       href={p.live}
                       target="_blank"
@@ -216,7 +216,7 @@ export default function Portfolio() {
             <p><a href="https://wa.me/+2347067594570?text=Hello%20there!"
             target="_blank"
             rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-800">
+              className="text-blue-600 hover:text-blue-800">
               Contact: +2347067594570
               </a>
             </p>
