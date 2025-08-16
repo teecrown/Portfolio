@@ -1,38 +1,42 @@
 import React, { useState, useEffect, useMemo } from "react";
 import pics from "./assets/pics.JPG";
 import CV from "./assets/CV.pdf";
+import Fixit from "./assets/fixit.png";
+import Health from "./assets/Health-connect.png";
+import lijofoods from "./assets/lijofoods.png";
+import { Phone } from 'lucide-react';
 
 // Data
 const projects = [
   {
     title: "TransitLive",
-    blurb: "Real‑time bus arrivals with route search and offline cache.",
-    image: "https://via.placeholder.com/600x400?text=TransitLive",
-    tech: ["Next.js", "React", "TypeScript", "Tailwind", "PWA"],
-    live: "#",
-    code: "#",
+    blurb: " innovative civic tech platform, where you can easily report and track public infrastructure problems in your community.Join us in making a difference by highlighting issues in your community.",
+    image: Fixit,
+    tech: [ "React", "TypeScript", "Tailwind", "PWA"],
+    live: "https://fixitnaija.vercel.app",
+    code: "https://github.com/teecrown/Fixitnaija",
   },
   {
-    title: "UI Motion Lab",
-    blurb: "A gallery of micro‑interactions built with Framer Motion.",
-    image: "https://via.placeholder.com/600x400?text=UI%20Motion%20Lab",
-    tech: ["React", "Framer Motion", "Vite", "Tailwind"],
-    live: "#",
-    code: "#",
+    title: "Health-Connect",
+    blurb: "Easily discover nearby clinics, pharmacies, and reliable health information—all in one place.",
+    image: Health,
+    tech: ["React", "Vite","Javascript", "Git", "Figma","Tailwind"],
+    live: "https://health-connect-six.vercel.app",
+    code: "https://github.com/teecrown/Health-Connect",
   },
   {
-    title: "DevNotes",
-    blurb: "Markdown notes app with tagging, search, and sync.",
-    image: "https://via.placeholder.com/600x400?text=DevNotes",
-    tech: ["React", "Zustand", "Tailwind", "IndexedDB"],
-    live: "#",
-    code: "#",
+    title: "Lijo Foods",
+    blurb: "Experience the rich taste of Nigeria with LijoFoods. We offer premium catering services for all your events, bringing traditional recipes and modern elegance to your table.",
+    image: lijofoods,
+    tech: ["Next.js","Git","Vite","Figma", "Tailwind", "Typscript"],
+    live: "https://www.lijofoods.com/",
+    code: "https://github.com/teecrown/lijofoods",
   },
 ];
 
 const skills = {
   Languages: ["HTML", "CSS", "JavaScript", "TypeScript"],
-  Frameworks: ["React", "Next.js", "Vue", "TailwindCSS"],
+  Frameworks: ["React", "Next.js", "TailwindCSS"],
   Tools: ["Git", "Figma", "Vite/Webpack", "ESLint/Prettier"],
 };
 
@@ -86,16 +90,17 @@ export default function Portfolio() {
         {/* Hero */}
         <section
           id="home"
-          className="container mx-auto px-4 py-16 flex flex-col md:flex-row gap-8 items-center"
+          className="container mx-auto px-4 py-16 flex flex-col md:flex-row gap-16 items-center"
         >
           <img
             src={pics}
             alt="Your portrait"
-            className="rounded-full w-40 h-40 sm:w-50 sm:h-50"
+            className="rounded-full w-40 h-40 sm:w-100 sm:h-100"
           />
-          <div>
+          <div >
+            
             <h1 className="text-4xl font-bold mb-4">Hi, I’m Abiola Tade 👋</h1>
-            <p className="mb-6 text-lg">
+            <p className="mb-6 text-lg w-[400px]">
               Front‑End Developer specialized in building fast, responsive, and
               accessible web apps with React, Next.js, TypeScript, and Tailwind
               CSS. I turn complex ideas into clean, user-friendly interfaces
@@ -149,12 +154,14 @@ export default function Portfolio() {
                   <div className="flex gap-2">
                     <a
                       href={p.live}
+                      target="_blank"
                       className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
                     >
                       Live Demo
                     </a>
                     <a
                       href={p.code}
+                      target="_blank"
                       className="border border-blue-600 text-blue-600 px-3 py-1 rounded text-sm hover:bg-blue-50"
                     >
                       GitHub
@@ -206,6 +213,14 @@ export default function Portfolio() {
               Recently I’ve been exploring design systems, performance budgets,
               and server components in Next.js.
             </p>
+            <p><a href="https://wa.me/+2347067594570?text=Hello%20there!"
+            target="_blank"
+            rel="noopener noreferrer"
+              className="text-green-600 hover:text-green-800">
+              Contact: +2347067594570
+              </a>
+            </p>
+            
           </div>
           <div id="contact">
             <h2 className="text-3xl font-bold mb-4">Contact</h2>
@@ -239,7 +254,7 @@ export default function Portfolio() {
 
         <footer className="bg-gray-100 dark:bg-gray-800 text-center py-4">
           <p className="text-sm">
-            © {new Date().getFullYear()} Your Name — Built with React &
+            © {new Date().getFullYear()} Abiola Tade — Built with React &
             TailwindCSS
           </p>
         </footer>
